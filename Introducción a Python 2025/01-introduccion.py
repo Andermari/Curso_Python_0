@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 # Reiniciar lista de variables
-%reset -f
+
 
 # --------- Tipos de datos en Python ---------
 # Entero (int)
@@ -18,6 +18,7 @@ print("Nombre (str):", nombre)
 
 # Booleano (bool)
 es_mayor = True
+es_menor = False
 print("Es mayor de edad (bool):", es_mayor)
 
 
@@ -38,9 +39,11 @@ print(edad * 2) # Lo estamos mostrando en formato texto
 edad = int(edad)
 print(edad * 2)
 
+edad_entero = int(input("Introduce tu edad: "))
+print(edad_entero * 2)
 
 # --------- Operadores matemáticos ---------
-%reset -f
+
 
 # Calculadora: se realiza la operación y se muestra el valor, pero no se almacena ni trabaja con él
 25 + 3
@@ -81,7 +84,6 @@ print("Módulo:", modulo)
 
 
 # --------- Operadores comparativos ---------
-%reset -f
 
 c = 15
 d = 20
@@ -107,7 +109,6 @@ print("c <= d:", c <= d)
 
 
 # --------- Operadores lógicos ---------
-%reset -f
 
 x = True
 y = False
