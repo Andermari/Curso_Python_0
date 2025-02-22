@@ -1,14 +1,19 @@
 # -*- coding: utf-8 -*-
 
 # --------- Listas ---------
-%reset -f
 
 # Una lista es una colección ordenada y modificable de elementos
 lista = [1, 2, "Python", True, 3.14]
+lista.extend([5, 6, 7])  # Añade varios elementos al final
+lista.pop()  # Elimina el último elemento
+lista.remove(2)  # Elimina el elemento con valor 2  
+print(lista)
 
 # Añadir elementos
 lista.append("nuevo_elemento")  # Añade al final
+print(lista)
 lista.insert(1, "en_medio")     # Inserta en la posición 1
+print(lista)
 
 # Acceder a elementos
 primer_elemento = lista[0]  # Primer elemento
@@ -18,6 +23,13 @@ ultimo_elemento = lista[-1]  # Último elemento
 # Modificar elementos
 lista[0] = 100  # Cambia el primer elemento de 1 a 100
 lista[2] = "Python Avanzado"  # Modifica un elemento de texto
+lista_pa_la_saca = [1,2,3,4,5,6,7,8,9,10]
+lista[4] = lista_pa_la_saca
+print(lista)
+lista[4][0] = 1000
+print(lista)
+# Acceder a elementos de una lista anidada
+# lista[0][1]
 
 # Eliminar elementos
 lista.remove("nuevo_elemento")  # Elimina por valor
@@ -37,7 +49,7 @@ print("Copia modificada:", copia_lista)
 
 # Convertir lista a cadena de texto (usando solo elementos de texto)
 lista_textos = ["Daniel", "Nahikari", "Borja"]
-cadena = ", ".join(lista_textos)
+cadena = " ||| ".join(lista_textos)
 print("Lista convertida a cadena:", cadena)
 
 # Convertir lista en tupla
@@ -50,10 +62,11 @@ print("Lista convertida a conjunto:", lista_a_conjunto)
 
 
 # --------- Tuplas ---------
-%reset -f
+
 
 # Las tuplas son colecciones ordenadas e inmutables
 tupla = (1, 2, "Python", True, 3.14)
+tupla_2 = 1, 2, "Python", True, 3.14
 
 # Acceder a elementos
 primer_tupla = tupla[0]
@@ -79,23 +92,26 @@ tupla_a_conjunto = set(tupla)
 print("Tupla convertida a conjunto:", tupla_a_conjunto)
 
 
+
 # --------- Diccionarios ---------
-%reset -f
+
 
 # Los diccionarios almacenan pares clave-valor
 diccionario = {
-    "nombre": "Juan",
+    "nombre": "Ander",
     "edad": 25,
     "ciudad": "Madrid"
 }
 
 # Añadir o modificar elementos
 diccionario["profesión"] = "Ingeniero"  # Añadir un nuevo par clave-valor
-diccionario["edad"] = 26  # Modificar un valor existente
+diccionario["apellido"] = "García"  # Añadir un nuevo par clave-valor
+diccionario["edad"] = 38  # Modificar un valor existente
 
 # Acceder a valores
 nombre = diccionario["nombre"]
 profesion = diccionario.get("profesión", "No especificada")
+a_cascarla = diccionario.get("merengue", "No especificada")
 
 # Eliminar elementos
 del diccionario["ciudad"]
@@ -111,8 +127,10 @@ print("Diccionario original:", diccionario)
 print("Diccionario copiado y modificado:", copia_diccionario)
 
 
-# --------- Conjuntos ---------
-%reset -f
+
+
+# --------- Conjuntos ---------  SET
+
 
 # Los conjuntos son colecciones no ordenadas de elementos únicos
 conjunto = {1, 2, 3, "Python", True}
@@ -158,11 +176,11 @@ print("Conjunto convertido en tupla:", conjunto_a_tupla)
 
 
 # --------- Listas Anidadas ---------
-%reset -f
+
 
 # Las listas anidadas son listas que contienen otras listas como elementos
 lista_anidada = [
-    [1, 2, 3],        # Primera sublista
+    [1, "Merengue", 3],        # Primera sublista
     [4, 5, 6],        # Segunda sublista
     [7, 8, 9]         # Tercera sublista
 ]
@@ -171,7 +189,7 @@ lista_anidada = [
 primer_elemento_lista = lista_anidada[0]  # [1, 2, 3]
 
 # Acceder a un elemento dentro de la sublista
-elemento_anidado = lista_anidada[0][1]  # Segundo elemento de la primera sublista -> 2
+elemento_anidado = lista_anidada[0][1][5]  # Segundo elemento de la primera sublista -> 2
 
 # Modificar un elemento dentro de una sublista
 lista_anidada[1][2] = 60  # Cambia el tercer elemento de la segunda sublista de 6 a 60
@@ -183,7 +201,7 @@ print("Lista anidada modificada:", lista_anidada)
 
 
 # --------- Diccionarios Anidados ---------
-%reset -f
+
 
 # Los diccionarios anidados son diccionarios que contienen otros diccionarios como valores
 diccionario_anidado = {
@@ -196,6 +214,26 @@ diccionario_anidado = {
         "nombre": "Ana",
         "edad": 22,
         "cursos": ["Biología", "Química"]
+    },
+    "estudiante3": {
+        "nombre": "Manué",
+        "edad": 35,
+        "cursos": ["Biología", "Química"]
+    },
+    "estudiante4": {
+        "nombre": "Amparo",
+        "edad": 44,
+        "cursos": ["FIsica", "Química"]
+    },
+    "estudiante5": {
+        "nombre": "Veintitré",
+        "edad": 68,
+        "cursos": ["Lengua", "Química"]
+    },
+    "estudiante6": {
+        "nombre": "Genaro",
+        "edad": 32,
+        "cursos": ["Mate", "Química"]
     }
 }
 
@@ -209,7 +247,7 @@ nombre_estudiante1 = diccionario_anidado["estudiante1"]["nombre"]  # "Juan"
 diccionario_anidado["estudiante1"]["calificación"] = 8.5
 
 # Añadir un nuevo estudiante al diccionario principal
-diccionario_anidado["estudiante3"] = {
+diccionario_anidado["estudiante7"] = {
     "nombre": "Luis",
     "edad": 23,
     "cursos": ["Física", "Geografía"]
@@ -221,5 +259,5 @@ diccionario_anidado["estudiante2"]["edad"] = 23  # Cambia la edad de Ana
 print("Diccionario anidado modificado:", diccionario_anidado)
 
 # Acceder a un curso de un estudiante dentro del diccionario
-curso_estudiante2 = diccionario_anidado["estudiante2"]["cursos"][0]  # Primer curso de Ana -> "Biología"
+curso_estudiante2 = diccionario_anidado["estudiante2"]["cursos"][0][1]  # Primer curso de Ana -> "Biología"
 

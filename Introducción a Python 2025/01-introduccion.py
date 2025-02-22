@@ -66,6 +66,12 @@ print("Resta:", resta)
 multiplicacion = a * b
 print("Multiplicación:", multiplicacion)
 
+
+# Raíz cúbica porque b = 3
+raiz = a * 1/b
+print("Multiplicación:", raiz)
+
+
 # División
 division = a / b
 print("División:", division)
@@ -136,4 +142,18 @@ o para documentar cómo funciona un bloque de instrucciones.
 
 
 
+# --------- Entrada de datos y operaciones ---------
 
+mi_edad = int(input("Introduce tu edad: "))
+aita_edad = int(input("Introduce la edad de tu aita: "))
+
+suma = mi_edad + aita_edad  
+print("La suma de vuestras edades es:", suma)
+
+resta_orden = mi_edad - aita_edad 
+print("La resta de vuestras edades es:", resta_orden)
+resta_desorden = aita_edad - mi_edad
+print("La resta de vuestras edades es:", resta_desorden)
+
+diferencia = abs(mi_edad - aita_edad)
+print("La diferencia de vuestras edades es de", diferencia, "años")

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 # --------- Estructuras de Control en Python ---------
-%reset -f
+ 
 
 # Las estructuras de control permiten modificar el flujo de un programa.
 # Las principales son:
@@ -38,7 +38,7 @@ if edad >= 18:
 else:
     print("Eres menor de edad")
 
-%reset -f
+ 
 
 # --------- Bucles ---------
 
@@ -65,14 +65,14 @@ while True:
     else:
         print("Intenta de nuevo.")
 
-%reset -f
+ 
 
 # --------- Bucle for ---------
 # El bucle for se utiliza para iterar sobre una secuencia (lista, cadena, rango, etc.)
 # for variable in secuencia:
 #     código que se ejecuta por cada elemento
 
-frutas = ["manzana", "banana", "cereza"]
+frutas = ["manzana", "banana", "cereza", "dátil", "uva", "kiwi"]
 for fruta in frutas:
     print(f"Fruta: {fruta}")
 
@@ -82,7 +82,7 @@ for fruta in frutas:
 for i in range(1, 6):
     print(f"Número: {i}")
 
-%reset -f
+ 
 
 # --------- Uso de enumerate en bucles ---------
 # La función enumerate nos permite obtener tanto el índice como el valor al recorrer una secuencia.
@@ -91,7 +91,7 @@ frutas = ["manzana", "banana", "cereza"]
 for indice, fruta in enumerate(frutas):
     print(f"Índice: {indice}, Fruta: {fruta}")
 
-%reset -f
+ 
 
 # --------- Bucle anidado ---------
 # Un bucle puede estar dentro de otro bucle. Esto se usa para recorrer estructuras más complejas.
@@ -107,7 +107,7 @@ for fila in matriz:
         print(elemento, end=" ")
     print()  # Salto de línea para separar las filas
 
-%reset -f
+ 
 
 # --------- For con else ---------
 # Se puede usar un bloque else con el for. El código del else se ejecuta cuando el bucle termina normalmente (sin break).
@@ -117,7 +117,7 @@ for i in range(5):
 else:
     print("El bucle ha terminado.")
 
-%reset -f
+ 
 
 # --------- Uso de break y continue ---------
 # - break: Termina el bucle inmediatamente.
@@ -137,7 +137,7 @@ for i in range(10):
         continue  # Salta los números pares
     print(f"Número impar: {i}")
 
-%reset -f
+ 
 
 # --------- Control de flujo adicional ---------
 # - pass: No hace nada, se utiliza cuando se necesita un bloque de código vacío.
@@ -151,7 +151,7 @@ elif numero == 10:
 else:
     print("El número es menor a 10")
 
-%reset -f
+ 
 
 # --------- Extra: Bucles anidados con condiciones ---------
 # Un ejercicio avanzado con bucles y condicionales dentro de bucles.

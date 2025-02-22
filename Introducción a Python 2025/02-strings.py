@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 # Reiniciar lista de variables
-%reset -f
+
 
 # --------- ¿Qué es una cadena de texto (string)? ---------
 # Las cadenas en Python pueden ser definidas con comillas simples o dobles
@@ -17,7 +17,7 @@ print("Cadena multilinea:", cadena_multilinea)
 
 
 # --------- Concatenación de cadenas ---------
-%reset -f
+
 # El operador + permite concatenar (unir) cadenas
 nombre = "Lucía"
 apellido = "Martínez"
@@ -40,7 +40,7 @@ print(advertencia)
 
 
 # --------- Acceder a caracteres de una cadena ---------
-%reset -f
+
 # Cada carácter de una cadena tiene un índice
 fruta = "Manzana"
 primera_letra = fruta[0]  # Primera letra
@@ -53,7 +53,7 @@ print("Letra en el índice 3:", letra_intermedia)
 
 
 # --------- Subcadenas (slicing) ---------
-%reset -f
+
 # Puedes extraer una subcadena usando slicing [inicio:fin]
 frase = "Aprender Python es divertido"
 parte_frase = frase[0:9]  # Extraer "Aprender"
@@ -72,7 +72,7 @@ print("Caracteres alternos:", caracteres_alternos)
 
 
 # --------- Longitud de una cadena ---------
-%reset -f
+
 # La función len() devuelve la longitud de una cadena
 mensaje = "¡Bienvenido a Python!"
 longitud = len(mensaje)
@@ -81,7 +81,7 @@ print("Longitud del mensaje:", longitud)
 
 
 # --------- Métodos útiles de cadenas ---------
-%reset -f
+
 # Convertir a minúsculas
 texto = "Hola MUNDO"
 print("Minúsculas:", texto.lower())
@@ -107,7 +107,7 @@ print("¿Termina con 'divertido'?", frase.endswith("divertido"))
 
 
 # --------- Método count() ---------
-%reset -f
+
 # El método count() cuenta cuántas veces aparece una subcadena
 parrafo = "Python es genial. Me encanta Python porque Python es fácil de aprender."
 veces_python = parrafo.count("Python")
@@ -116,7 +116,7 @@ print("Número de veces que aparece 'Python':", veces_python)
 
 
 # --------- Formateo de cadenas ---------
-%reset -f
+
 # Usar f-strings para formatear cadenas con variables
 nombre = "Carlos"
 edad = 25
@@ -131,7 +131,7 @@ print(formato.format(nombre, edad))
 
 
 # --------- Control de decimales ---------
-%reset -f
+
 pi = 3.14159
 
 # Mostrar 2 decimales
@@ -145,7 +145,7 @@ print(f"Valor de pi sin decimales: {pi:.0f}")
 
 
 # --------- Alineación de cadenas ---------
-%reset -f
+
 # Alinear un número a la derecha
 numero = 123.456
 print(f"{numero:>10.2f}")  # Alinear a la derecha con 2 decimales
