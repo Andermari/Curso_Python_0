@@ -57,12 +57,14 @@ while contador <= 5:
 # Con la instrucción break podemos interrumpir el bucle antes de que la condición se vuelva falsa.
 
 numero_secreto = 7
+intentos = 0
 while True:
     adivinanza = int(input("Adivina el número (entre 1 y 10): "))
     if adivinanza == numero_secreto:
-        print("¡Adivinaste!")
+        print("¡Adivinaste! Solo te a costado", intentos, "intentos.")
         break
     else:
+        intentos += 1
         print("Intenta de nuevo.")
 
  
@@ -86,6 +88,9 @@ for i in range(1, 6):
 
 # --------- Uso de enumerate en bucles ---------
 # La función enumerate nos permite obtener tanto el índice como el valor al recorrer una secuencia.
+frutas = ["manzana", "banana", "cereza"]
+for fruta in frutas:
+    print(f"Fruta: {fruta}")
 
 frutas = ["manzana", "banana", "cereza"]
 for indice, fruta in enumerate(frutas):
@@ -102,9 +107,11 @@ matriz = [
     [7, 8, 9]
 ]
 
-for fila in matriz:
-    for elemento in fila:
-        print(elemento, end=" ")
+#for anidado para recorrer una matriz
+
+for fila in matriz: #Reocorre cada fila
+    for elemento in fila: #recorre cada elemento de la fila
+        print(elemento, end=" ") # Imprime el elemento sin salto de línea
     print()  # Salto de línea para separar las filas
 
  
@@ -124,18 +131,33 @@ else:
 # - continue: Salta el resto del código en la iteración actual y continúa con la siguiente.
 
 # Ejemplo de break:
+print("A B \n_ _")
 for i in range(10):
+    print(i, end=" ")
     if i == 5:
         break  # Se detiene cuando i es 5
     print(i)
-
+print()
 print("El bucle se ha detenido en el número 5")
 
 # Ejemplo de continue:
-for i in range(10):
-    if i % 2 == 0:
-        continue  # Salta los números pares
-    print(f"Número impar: {i}")
+for i in range(30):
+    #if i % 2 == 0:
+    if i % 3 == 0:
+        continue  # Vuelve al inicio del bucle si el número es par
+    #print(f"Número impar: {i}")
+    print(f"No es múltiplo de 3: {i}")
+
+
+
+# Ejemplo de pass:
+for i in range(30):
+    #if i % 2 == 0:
+    if i % 3 == 0:
+        pass  # No hacer nada si el número es par
+        print(f"Este si: {i}")
+    #print(f"Número impar: {i}")
+    print(f"No es múltiplo de 3: {i}")
 
  
 
@@ -157,6 +179,7 @@ else:
 # Un ejercicio avanzado con bucles y condicionales dentro de bucles.
 
 numeros = [10, 15, 20, 25, 30]
+
 for numero in numeros:
     if numero % 2 == 0:
         print(f"{numero} es par")
